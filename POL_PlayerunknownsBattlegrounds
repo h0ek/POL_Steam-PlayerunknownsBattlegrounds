@@ -1,0 +1,68 @@
+#!/bin/bash
+# Date : 2017-04-01
+# Last revision : 2017-04-01
+# Wine version used : 2.4-staging
+# Distribution used to test : Ubuntu, Mint, Xubuntu
+# Author : Hoek
+# Email : hoek@protonmail.com
+# Licence : GPLv3
+# PlayOnLinux:  playonlinux-4.2.10
+# Steam + Wine x64 + Playerunknown's Battlegrounds
+ 
+[ "$PLAYONLINUX" = "" ] && exit 0
+source "$PLAYONLINUX/lib/sources"
+ 
+TITLE="Steam"
+WINEVERSION="2.4-staging"
+GAME_VMS="256"
+Set_OS "win10"
+ 
+POL_SetupWindow_Init
+POL_SetupWindow_presentation "$TITLE" "Valve" "http://www.valvesoftware.com/" "Hoek" "$PREFIX"
+
+if [ -e "$POL_USER_ROOT/wineprefix/Steam" ]; then
+    POL_SetupWindow_textbox "$(eval_gettext 'Please choose a virtual drive name')" "$TITLE"
+    PREFIX="$APP_ANSWER"
+else
+    PREFIX="Steam"
+fi
+ 
+POL_Wine_SelectPrefix "$PREFIX"
+ 
+POL_System_SetArch "x64"
+POL_Wine_PrefixCreate "$WINEVERSION"
+ 
+POL_Call "POL_Install_corefonts"
+POL_Call "POL_Install_d3dx9"
+POL_Call "POL_Install_d3dx10"
+POL_Call "POL_Install_d3dx11"
+POL_Call "POL_Function_FontsSmoothRGB"
+POL_Call "POL_Install_AdobeAir"
+POL_Wine_OverrideDLL "" "dwrite"
+ 
+cd "$POL_USER_ROOT/wineprefix/$PREFIX/drive_c/"
+#POL_Download "http://cdn.steampowered.com/download/$STEAM_EXEC" ""
+ 
+cd "$POL_USER_ROOT/wineprefix/$PREFIX/drive_c/"
+POL_Download "https://steamcdn-a.akamaihd.net/client/installer/SteamSetup.exe"
+ 
+POL_Wine_WaitBefore "$TITLE"
+POL_Wine "SteamSetup.exe"
+ 
+POL_SetupWindow_VMS "$GAME_VMS"
+ 
+POL_Wine_OverrideDLL "" "gameoverlayrenderer"
+ 
+POL_Shortcut "Steam.exe" "$TITLE"
+
+POL_Wine_X11Drv "GrabFullScreen" "Y"
+POL_Wine_X11Drv "Managed" "Y"
+POL_Wine_X11Drv "Decorated" "Y"
+POL_Wine_UpdateRegistryWinePair 'DllRedirects' 'wined3d' 'wined3d-csmt.dll'
+ 
+#POL_SetupWindow_message "$(eval_gettext 'If you encounter problems with some games, try to disable Steam Overlay')" "$TITLE"
+ 
+POL_SetupWindow_message "$(eval_gettext 'If you want to install $TITLE in another virtual drive\nRun this installer again')" "$TITLE"
+ 
+POL_SetupWindow_Close
+exit 0
