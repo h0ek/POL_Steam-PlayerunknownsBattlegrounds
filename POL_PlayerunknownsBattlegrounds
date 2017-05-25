@@ -15,7 +15,6 @@ source "$PLAYONLINUX/lib/sources"
 TITLE="Steam"
 WINEVERSION="2.8-staging"
 GAME_VMS="256"
-Set_OS "win10"
  
 POL_SetupWindow_Init
 POL_SetupWindow_presentation "$TITLE" "Valve" "http://www.valvesoftware.com/" "Hoek" "$PREFIX"
@@ -31,7 +30,8 @@ POL_Wine_SelectPrefix "$PREFIX"
  
 POL_System_SetArch "x64"
 POL_Wine_PrefixCreate "$WINEVERSION"
- 
+
+Set_OS "win10"
 POL_Call "POL_Install_corefonts"
 POL_Call "POL_Install_d3dx9"
 POL_Call "POL_Install_d3dx10"
