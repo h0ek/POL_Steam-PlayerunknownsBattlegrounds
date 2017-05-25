@@ -1,7 +1,7 @@
 #!/bin/bash
 # Date : 2017-04-01
-# Last revision : 2017-04-01
-# Wine version used : 2.4-staging
+# Last revision : 2017-05-25
+# Wine version used : 2.8-staging
 # Distribution used to test : Ubuntu, Mint, Xubuntu
 # Author : Hoek
 # Email : hoek@protonmail.com
@@ -13,7 +13,7 @@
 source "$PLAYONLINUX/lib/sources"
  
 TITLE="Steam"
-WINEVERSION="2.4-staging"
+WINEVERSION="2.8-staging"
 GAME_VMS="256"
 Set_OS "win10"
  
