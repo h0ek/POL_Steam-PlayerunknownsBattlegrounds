@@ -31,13 +31,13 @@ POL_Wine_SelectPrefix "$PREFIX"
 POL_System_SetArch "x64"
 POL_Wine_PrefixCreate "$WINEVERSION"
 
-Set_OS "win10"
-POL_Call "POL_Install_corefonts"
-POL_Call "POL_Install_d3dx9"
-POL_Call "POL_Install_d3dx10"
-POL_Call "POL_Install_d3dx11"
-POL_Call "POL_Function_FontsSmoothRGB"
-POL_Call "POL_Install_AdobeAir"
+Set_OS win10
+POL_Call POL_Install_corefonts
+POL_Call POL_Install_d3dx9
+POL_Call POL_Install_d3dx10
+POL_Call POL_Install_d3dx11
+POL_Call POL_Function_FontsSmoothRGB
+POL_Call POL_Install_AdobeAir
 POL_Wine_OverrideDLL "" "dwrite"
  
 cd "$POL_USER_ROOT/wineprefix/$PREFIX/drive_c/"
