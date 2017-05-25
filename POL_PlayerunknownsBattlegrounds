@@ -38,6 +38,7 @@ POL_Call POL_Install_d3dx10
 POL_Call POL_Install_d3dx11
 POL_Call POL_Function_FontsSmoothRGB
 POL_Call POL_Install_AdobeAir
+POL_Call POL_Install_vcrun2012
 POL_Call POL_Install_vcrun2013
 POL_Wine_OverrideDLL "" "dwrite"
  
