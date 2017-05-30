@@ -1,8 +1,8 @@
 #!/bin/bash
 # Date : 2017-04-01
-# Last revision : 2017-05-25
-# Wine version used : 2.8-staging
-# Distribution used to test : Ubuntu, Mint, Xubuntu
+# Last revision : 2017-05-30
+# Wine version used : 2.9-staging
+# Distribution used to test : Xubuntu
 # Author : Hoek
 # Email : hoek@protonmail.com
 # Licence : GPLv3
@@ -13,7 +13,7 @@
 source "$PLAYONLINUX/lib/sources"
  
 TITLE="Steam"
-WINEVERSION="2.8-staging"
+WINEVERSION="2.9-staging"
 GAME_VMS="256"
  
 POL_SetupWindow_Init
