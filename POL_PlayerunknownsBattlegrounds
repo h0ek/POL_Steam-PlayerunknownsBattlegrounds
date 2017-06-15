@@ -1,7 +1,7 @@
 #!/bin/bash
 # Date : 2017-04-01
-# Last revision : 2017-05-30
-# Wine version used : 2.9-staging
+# Last revision : 2017-06-15
+# Wine version used : 2.10-staging
 # Distribution used to test : Xubuntu
 # Author : Hoek
 # Email : hoek@protonmail.com
@@ -13,7 +13,7 @@
 source "$PLAYONLINUX/lib/sources"
  
 TITLE="Steam"
-WINEVERSION="2.9-staging"
+WINEVERSION="2.10-staging"
 GAME_VMS="256"
  
 POL_SetupWindow_Init
@@ -32,9 +32,7 @@ POL_System_SetArch "x64"
 POL_Wine_PrefixCreate "$WINEVERSION"
 
 Set_OS win10
-POL_Call POL_Install_corefonts
-POL_Call POL_Install_d3dx9
-POL_Call POL_Install_d3dx10
+POL_Call POL_Wine_InstallFonts
 POL_Call POL_Install_d3dx11
 POL_Call POL_Function_FontsSmoothRGB
 POL_Call POL_Install_AdobeAir
