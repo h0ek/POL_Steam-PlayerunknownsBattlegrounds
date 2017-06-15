@@ -12,7 +12,7 @@
 [ "$PLAYONLINUX" = "" ] && exit 0
 source "$PLAYONLINUX/lib/sources"
  
-TITLE="Steam"
+TITLE="Playerunknowns Battlegrounds"
 WINEVERSION="2.10-staging"
 GAME_VMS="256"
  
