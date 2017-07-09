@@ -9,4 +9,7 @@ Required:
 
 [Wine](http://www.wine-staging.com/news.html) >= 2.10_staging
 
+VCRUN2015 installed using winetricks
+'''WINEARCH=win64 WINEPREFIX=$HOME/.PlayOnLinux/wineprefix/Steam/ winetricks vcrun2015'''
+
 Warning! This script allow you to install game but it's not playable yet. Work is in progress. Fingers crossed.
