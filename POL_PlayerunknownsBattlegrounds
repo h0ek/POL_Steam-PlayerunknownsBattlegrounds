@@ -1,7 +1,7 @@
 #!/bin/bash
 # Date : 2017-04-01
-# Last revision : 2017-08-12
-# Wine version used : 2.12-staging
+# Last revision : 2017-08-26
+# Wine version used : 2.15-staging
 # Distribution used to test : Xubuntu
 # Author : Hoek
 # Email : hoek@protonmail.com
@@ -13,7 +13,7 @@
 source "$PLAYONLINUX/lib/sources"
  
 TITLE="Playerunknowns Battlegrounds"
-WINEVERSION="2.12-staging"
+WINEVERSION="2.15-staging"
 GAME_VMS="256"
  
 POL_SetupWindow_Init
