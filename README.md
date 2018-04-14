@@ -7,7 +7,7 @@ Required:
 
 [PlayOnLinux](https://www.playonlinux.com/pl/download.html) >=4.2.10
 
-[Wine](http://www.wine-staging.com/news.html) >= 2.10_staging
+[Wine](http://www.wine-staging.com/news.html) >= 3.6
 
 VCRUN2015 (use winetricks)
 
