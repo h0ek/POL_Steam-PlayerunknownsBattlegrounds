@@ -10,6 +10,7 @@ Required:
 [Wine](http://www.wine-staging.com/news.html) >= 3.6
 
 VCRUN2015 (use winetricks)
+Go to Virtual Drive settings in PlayOnLinux and choose Miscellaneous tab -> Run Shell and paste below command.
 
 ```WINEARCH=win64 WINEPREFIX=$HOME/.PlayOnLinux/wineprefix/Steam/ winetricks vcrun2015```
 
