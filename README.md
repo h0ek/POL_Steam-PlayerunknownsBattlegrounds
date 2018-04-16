@@ -9,7 +9,7 @@ Required:
 
 [Wine](http://www.wine-staging.com/news.html) >= 3.6
 
-VCRUN2015 (use winetricks)
+[VCRUN2015](https://www.microsoft.com/en-US/download/details.aspx?id=48145) (use winetricks)
 
 Go to Virtual Drive settings in PlayOnLinux and choose Miscellaneous tab -> Run Shell and paste below command.
 
